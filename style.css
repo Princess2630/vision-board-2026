@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9fafb;
+}
+
+header {
+  background: #111827;
+  color: white;
+  padding: 15px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.tagline {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.controls {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+button, select, input {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+button {
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#board {
+  width: 100%;
+  height: calc(100vh - 170px);
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* draggable items */
+.item {
+  position: absolute;
+  cursor: grab;
+}
+
+.item img {
+  width: 150px;
+  max-width: 100%;
+  resize: both;
+  overflow: auto;
+}
+
+.text-item {
+  min-width: 120px;
+  min-height: 30px;
+  padding: 6px;
+  border: 1px dashed #aaa;
+  background: rgba(255,255,255,0.9);
+  font-size: 16px;
+}
+
+/* mobile tweaks */
+@media (max-width: 768px) {
+  .item img {
+    width: 120px;
+  }
+
+  .text-item {
+    font-size: 14px;
+  }
+}

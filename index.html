@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vision Board – Design Your Future</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Vision Board</h1>
+  <p class="tagline">Design Your Future</p>
+
+  <div class="controls">
+    <label for="imageUpload">Upload Image</label>
+    <input type="file" id="imageUpload" accept="image/*" />
+    
+    <label for="yearInput">Year</label>
+    <input type="number" id="yearInput" placeholder="Enter year" />
+    
+    <label for="templateSelect">Template</label>
+    <select id="templateSelect">
+      <option value="">Choose Template</option>
+      <option value="career">Career & Money</option>
+      <option value="health">Health & Lifestyle</option>
+      <option value="travel">Travel & Adventure</option>
+      <option value="growth">Personal Growth</option>
+      <option value="blank">Blank Board</option>
+    </select>
+
+    <button id="addText">Add Text</button>
+    <button id="addAffirmation">Add AI Affirmation ✨</button>
+    <button id="saveBoard">Save</button>
+    <button id="exportBoard">Export PNG</button>
+  </div>
+</header>
+
+<main id="board"></main>
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
